@@ -53,7 +53,7 @@ void Game::loadContent()
 	{
 		std::cout << "error with font file file";
 	}
-	if (!backGroundTexture.loadFromFile("ASSETS\\IMAGES\\floor.png.png"))
+	if (!backGroundTexture.loadFromFile("ASSETS\\IMAGES\\BackGround.png"))
 	{
 		std::cout << "No floor asset found" << std::endl;
 	}

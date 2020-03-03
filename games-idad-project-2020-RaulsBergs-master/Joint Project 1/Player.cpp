@@ -77,13 +77,12 @@ void Player::decreaseHealth(int t_healthLoss)
 	playerHealth = playerHealth - t_healthLoss;
 }
 
-/// <summary>
 /// Player moves left
 /// </summary>
 void Player::moveLeft()
 {
 	playerDirection = 2;
-	playerBody.setTexture(textureSouth);
+	playerBody.setTextureRect(sf::IntRect(50, 0, 48, 100));
 	playerPosition = playerBody.getPosition();
 	playerPosition.x = (playerPosition.x - (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);
@@ -108,7 +107,7 @@ void Player::moveRight()
 void Player::moveUp()
 {
 	playerDirection = 3;
-	playerBody.setTexture(textureSouth);
+	playerBody.setTextureRect(sf::IntRect(90, 0, 48, 100));
 	playerPosition = playerBody.getPosition();
 	playerPosition.y = (playerPosition.y - (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);
@@ -121,7 +120,7 @@ void Player::moveUp()
 void Player::moveDown()
 {
 	playerDirection = 4;
-	playerBody.setTexture(textureSouth);
+	playerBody.setTextureRect(sf::IntRect(150, 0, 48, 100));
 	playerPosition = playerBody.getPosition();
 	playerPosition.y = (playerPosition.y + (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);
