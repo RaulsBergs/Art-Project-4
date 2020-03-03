@@ -1,0 +1,15 @@
+﻿  EnemyOne.cpp
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyOne.cpp(13,18): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+  EnemyTwo.cpp
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyOne.cpp(16,29): warning C4305:  'argument': truncation from 'double' to 'float'
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyTwo.cpp(7,17): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyTwo.cpp(8,17): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyTwo.cpp(31,18): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\EnemyTwo.cpp(32,18): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\Game.cpp(77,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Player.cpp
+  Projectile.cpp
+  Generating Code...
+C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Joint Project 1\Game.cpp(210,19): warning C4930:  'sf::VertexArray EnemyCentre(void)': prototyped function not called (was a variable definition intended?)
+  Joint Project 1.vcxproj -> C:\Users\C00247700\Desktop\Art-Project-4\games-idad-project-2020-RaulsBergs-master\Debug\Joint Project 1.exe
