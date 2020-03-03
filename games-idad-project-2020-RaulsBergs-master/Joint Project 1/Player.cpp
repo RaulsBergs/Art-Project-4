@@ -50,22 +50,22 @@ sf::Vector2f Player::getPos()
 /// </summary>
 void Player::loadPlayerTexture()
 {
-	if (!textureSouth.loadFromFile("ASSETS\\IMAGES\\player_down.png"))
+	if (!textureSouth.loadFromFile("ASSETS\\IMAGES\\Player1.png"))
 	{
-		std::cout << "Problem Loading 'player_down.png'" << std::endl;
+		std::cout << "Problem Loading 'Player1.png'" << std::endl;
 	}
-	if (!textureNorth.loadFromFile("ASSETS\\IMAGES\\player_up.png"))
-	{
-		std::cout << "Problem Loading 'player_up.png'" << std::endl;
-	}
-	if (!textureEast.loadFromFile("ASSETS\\IMAGES\\player_right.png"))
-	{
-		std::cout << "Problem Loading 'player_right.png'" << std::endl;
-	}
-	if (!textureWest.loadFromFile("ASSETS\\IMAGES\\player_left.png"))
-	{
-		std::cout << "Problem Loading 'player_left.png'" << std::endl;
-	}
+	//if (!textureNorth.loadFromFile("ASSETS\\IMAGES\\player_up.png"))
+	//{
+	//	std::cout << "Problem Loading 'player_up.png'" << std::endl;
+	//}
+	//if (!textureEast.loadFromFile("ASSETS\\IMAGES\\player_right.png"))
+	//{
+	//	std::cout << "Problem Loading 'player_right.png'" << std::endl;
+	//}
+	//if (!textureWest.loadFromFile("ASSETS\\IMAGES\\player_left.png"))
+	//{
+	//	std::cout << "Problem Loading 'player_left.png'" << std::endl;
+	//}
 }
 
 /// <summary>
@@ -83,7 +83,7 @@ void Player::decreaseHealth(int t_healthLoss)
 void Player::moveLeft()
 {
 	playerDirection = 2;
-	playerBody.setTexture(textureWest);
+	playerBody.setTexture(textureSouth);
 	playerPosition = playerBody.getPosition();
 	playerPosition.x = (playerPosition.x - (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);
@@ -95,7 +95,7 @@ void Player::moveLeft()
 void Player::moveRight()
 {
 	playerDirection = 1;
-	playerBody.setTexture(textureEast);
+	playerBody.setTextureRect(sf::IntRect(0, 0, 50, 100));
 	playerPosition = playerBody.getPosition();
 	playerPosition.x = (playerPosition.x + (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);
@@ -108,7 +108,7 @@ void Player::moveRight()
 void Player::moveUp()
 {
 	playerDirection = 3;
-	playerBody.setTexture(textureNorth);
+	playerBody.setTexture(textureSouth);
 	playerPosition = playerBody.getPosition();
 	playerPosition.y = (playerPosition.y - (1 * playerSpeed));
 	playerBody.setPosition(playerPosition);

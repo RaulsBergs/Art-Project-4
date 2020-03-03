@@ -10,11 +10,12 @@ EnemyOne::EnemyOne()
 	loadEnemyTexture();
 	isAlive = true;
 	enemyBody.setTexture(textureEast);
+	enemyBody.setTextureRect(sf::IntRect(50,50,320,230));
 	float randYCord = (rand() % 600) + 1;
 	enemyPosition = { 200.0f,randYCord};
 	enemyBody.setPosition(enemyPosition);
-	enemyBody.setScale(1.2, 1.2);
-	enemyBody.setOrigin(32, 32);
+	enemyBody.setScale(0.4, 0.4);
+	enemyBody.setOrigin(200,0);
 }
 
 sf::Sprite EnemyOne::getBody()
@@ -24,11 +25,11 @@ sf::Sprite EnemyOne::getBody()
 
 void EnemyOne::loadEnemyTexture()
 {
-	if (!textureEast.loadFromFile("ASSETS\\IMAGES\\enemy1_right.png"))
+	if (!textureEast.loadFromFile("ASSETS\\IMAGES\\real bee.png"))
 	{
 		std::cout << "Problem Loading 'player_down.png'" << std::endl;
 	}
-	if (!textureWest.loadFromFile("ASSETS\\IMAGES\\enemy1_left.png"))
+	if (!textureWest.loadFromFile("ASSETS\\IMAGES\\real bee.png"))
 	{
 		std::cout << "Problem Loading 'player_up.png'" << std::endl;
 	}
@@ -47,13 +48,13 @@ void EnemyOne::checkWallCollision()
 	{
 		speed = speed * -1;
 		enemyBody.setPosition(m_newPos);
-		enemyBody.setTexture(textureWest);
+		enemyBody.setTextureRect(sf::IntRect(50, 50, 320, 230));
 	}
 
 	if (enemyBody.getPosition().x < 35)
 	{
 		speed = speed * -1;
 		enemyBody.setPosition(m_newPos);
-		enemyBody.setTexture(textureEast);
+		enemyBody.setTextureRect(sf::IntRect(390, 50, 320, 230));
 	}
 }
